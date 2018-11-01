@@ -13,6 +13,6 @@ COPY airflow.cfg ${AIRFLOW_HOME}
 
 
 
-# RUN airflow initdb && \
-#     airflow scheduler -D && \
-#     airflow webserver -D
+RUN airflow initdb && \
+    airflow scheduler -D && \
+    airflow webserver -D

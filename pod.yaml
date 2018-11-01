@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: airflow-pod
+spec:
+  containers:
+    - name: db
+      image: postgres
+      ports:
+        - containerPort: 5432
+    - name: airflow
+      image: dschuler36/airflow
+      ports:
+        - containerPort: 8080
